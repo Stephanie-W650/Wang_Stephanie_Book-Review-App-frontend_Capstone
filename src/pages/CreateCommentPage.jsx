@@ -3,7 +3,7 @@ import { getComments } from '../utilities/books-api.js';
 import CreateCommentForm from '../components/CreateCommentForm.jsx'
 import CommentList from '../components/CommentList.jsx'
 
-export default function HomePage() {
+export default function CreateCommentPage() {
   const [comments, setComments] = useState(null);
 
   useEffect(() => {

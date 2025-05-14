@@ -28,7 +28,7 @@ async function handleSubmit(e) {
         setComments(comments)
         console.log(data)
     } catch (error) {
-        
+        console.error(error)
     }
 }
 

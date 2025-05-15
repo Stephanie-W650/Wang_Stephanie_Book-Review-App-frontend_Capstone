@@ -2,10 +2,10 @@
 
 export default function PostListItem({ post }) {
   return (
-    <div>
-        <h2>{post.title}</h2>
-        <p>{post.content}</p>
-        <p>{post.genre}</p>
+    <div className="Post-list-item">
+        <p>Title: {post.title}</p>
+        <p>Content: {post.content}</p>
+        <p>Genre: {post.genre}</p>
         
         </div>
   )

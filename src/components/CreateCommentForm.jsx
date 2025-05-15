@@ -33,16 +33,25 @@ async function handleSubmit(e) {
 }
 
   return (
-    <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='Enter Username' name='username' value={formData.username} onChange={handleChange} />
-        <input type="text" placeholder='Enter Comments' name='content' value={formData.content} onChange={handleChange} />
-        <input type="number" placeholder='Enter rating 1 to 5' min='1' max='5' name='rating' value={formData.rating} onChange={handleChange} />
-        <input type="submit" />
+<>
+    <h2>Create A Review</h2>
+    <form onSubmit={handleSubmit} className="create-comment-form">
+        <div className="form-content">
+       
+        <input type="text" placeholder='Enter Username' name='username' value={formData.username} onChange={handleChange} /> <br /></div>
+        <div className="form-content">
+           
+        <input type="text" placeholder='Your Reviews' name='content' value={formData.content} onChange={handleChange} /><br /></div>
+        <div className="form-content">
+          
+        <input type="number" placeholder='Enter rating 1 to 5' min='1' max='5' name='rating' value={formData.rating} onChange={handleChange} /><br /></div>
+        <div><input id="review-submit-button" type="submit" /></div>
 
 
 
 
 
     </form>
+    </>
   )
 }

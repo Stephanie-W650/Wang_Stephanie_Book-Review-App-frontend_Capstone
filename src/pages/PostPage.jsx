@@ -16,7 +16,7 @@ export default function PostPage() {
     return (
         <>
            
-            <h2>All Posts</h2>
+            <h2>Book List</h2>
             <PostList posts={posts} />
             
 

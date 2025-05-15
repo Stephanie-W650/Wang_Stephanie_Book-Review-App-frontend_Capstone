@@ -20,20 +20,21 @@ export default function HomePage() {
     <NavBar />
       
      
-      <h2>All Commnets</h2>
-      <div>
-        <ul>
+      <h2 className="comment-title">Book Reviews</h2>
+      <div className="comment-container">
+        <ul className="comment-list">
           {comments.map((comment) => (
-            <li>
+            <li className="comment-item">
               <p>
-              <Link to={`/${comment._id}`}>{comment.username}</Link> <br />
-              {comment.content}<br />
-              {comment.rating}<br />
+               Username: {comment.username} <br />
+              <Link to={`/${comment._id}`}>Reviews: </Link>{comment.content}<br />
+              Ratings: {comment.rating}<br />
               </p>
             </li>
           ))}
         </ul>
       </div>
     </>
+    
   );
 }

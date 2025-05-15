@@ -1,4 +1,3 @@
-//import { useState } from "react";
 
 
 export default function DarkModeToggle({toggleTheme, dark }) {
@@ -9,7 +8,7 @@ export default function DarkModeToggle({toggleTheme, dark }) {
   
   return (
     <div>
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} className={'themeButton'}>
         {dark ? "Light Theme" : "Dark Theme"}
       </button>
     </div>

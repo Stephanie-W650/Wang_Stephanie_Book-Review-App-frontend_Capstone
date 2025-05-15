@@ -69,15 +69,7 @@ button:focus-visible {
   }
 } */
 
-button {
 
-  border: 1px solid black;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  background-color: lightgray;
-  cursor: pointer;
-  border-radius: 8px;
-}
 
 /* .dark-theme {
 background-color: #333333;

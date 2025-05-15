@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+/* 100% height setup for root, html, body and .themeContainer(div)
+ so the dark/light themem can cover the whole page. if I remove one of them, 
+ the dark/light themem could not cover the whole page
+ */
+
+#root {
+  height: 100%; 
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.themeContainer {
+  height: 100%;
+} 
+
+
+.dark-theme {
+background-color: #333333;
+color:#ffffff;
+
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme a {
+  color: lightskyblue;
+}

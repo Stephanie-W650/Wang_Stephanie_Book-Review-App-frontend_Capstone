@@ -11,17 +11,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
-
+} */
+/* 
 body {
   margin: 0;
   display: flex;
@@ -46,6 +46,8 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+
 button:hover {
   border-color: #646cff;
 }
@@ -66,3 +68,35 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+button {
+
+  border: 1px solid black;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: lightgray;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* .dark-theme {
+background-color: #333333;
+color:#ffffff;
+
+} */
+/* .dark-theme {
+background-color: #333333;
+color:#ffffff;
+
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+} */
+

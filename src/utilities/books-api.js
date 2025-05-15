@@ -1,9 +1,10 @@
 import axios from 'axios'
-const baseURL = 'http://localhost:3000/comments'
-
+//const baseURL = 'http://localhost:3000/comments'
+const baseURL= 'https://wang-stephanie-book-review-app-backend.onrender.com/comments'
+const postURL = 'https://wang-stephanie-book-review-app-backend.onrender.com/posts'
 export async function getComments() {
   try {
-    const response = await fetch('http://localhost:3000/comments')
+    const response = await fetch(baseURL)
     const data = await response.json()
     return data;
   } catch (error) {
@@ -13,7 +14,7 @@ export async function getComments() {
 
 export async function getPosts() {
   try {
-    const response = await fetch('http://localhost:3000/posts')
+    const response = await fetch(postURL)
     const data = await response.json()
     return data;
   } catch (error) {

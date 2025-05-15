@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { getComments } from '../utilities/books-api';
-
+const baseURL= 'https://wang-stephanie-book-review-app-backend.onrender.com/comments'
 
 export default function CreateCommentForm( {setComments} ) {
     const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ export default function CreateCommentForm( {setComments} ) {
 async function handleSubmit(e) {
     e.preventDefault();
     try {
-        const response = await fetch ('http://localhost:3000/comments', {
+        const response = await fetch (baseURL, {
             method: "POST",
             headers: {'Content-Type': 'application/json' },
             body: JSON.stringify(formData)

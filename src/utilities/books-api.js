@@ -2,6 +2,8 @@ import axios from 'axios'
 //const baseURL = 'http://localhost:3000/comments'
 const baseURL= 'https://wang-stephanie-book-review-app-backend.onrender.com/comments'
 const postURL = 'https://wang-stephanie-book-review-app-backend.onrender.com/posts'
+
+//show all comments
 export async function getComments() {
   try {
     const response = await fetch(baseURL)
@@ -11,7 +13,7 @@ export async function getComments() {
     console.error(error)
   }
 } 
-
+//show all posts
 export async function getPosts() {
   try {
     const response = await fetch(postURL)
@@ -22,45 +24,25 @@ export async function getPosts() {
   }
 } 
 
-// export async function getCommentByID(id) {
-//   try {
-//     const response = await fetch(`http://localhost:3000/comments/${id}`)
-//     const data = await response.json()
-//     return data;
-//   } catch (error) {
-//     console.error(error)
-//   }
-// } 
 
-// export async function editComment(id, updatedComment) {
-//   try {
-//     const response = await fetch((`http://localhost:3000/comments/${id}`), {
-//       method: 'PUT',
-//       headers: {'Content-Type': 'application/json'},
-//       body: JSON.stringify(updatedComment)
 
-//     })
-//     const data = await response.json()
-//     return data;
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
 
+// show one comment
 export const getCommentByID = async (id) => {
     const URL = `${baseURL}/${id}`
     const response = await axios.get(URL)
     return response
 }
-
+//update a commnet
 export const editComment = async (id, updatedComment) => {
     const URL = `${baseURL}/${id}`
     const response = await axios.put(URL, updatedComment)
     return response
     }
-
+//delete a comment
 export const deleteComment = async (id) => {
     const URL = `${baseURL}/${id}`
     const response = await axios.delete(URL)
     return response
 }
+

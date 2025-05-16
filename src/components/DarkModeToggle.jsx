@@ -1,10 +1,9 @@
 
+// the toggleTheme is passes as a prop from the parent component
 
 export default function DarkModeToggle({toggleTheme, dark }) {
 
-  // const [dark, setDark] = useState(false);
-  // const toggle = () => {
-  //   setDark((prevTheme) => !prevTheme);
+ 
   
   return (
     <div>

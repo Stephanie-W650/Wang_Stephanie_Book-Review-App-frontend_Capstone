@@ -11,12 +11,15 @@ import './App.css';
 
 
 function App() {
+  // State hook to manage dark mode,'dark' will be true for dark theme and false for light theme
   const [dark, setDark] = useState(false)
   const toggleTheme = () => {
   setDark((prevTheme) => !prevTheme);}
 
     return (
 
+// The div has a class that changes depending on the current theme (dark or light)
+// 'dark-theme' is applied when 'dark' state is true, and 'light-theme' is applied when false.
       <div className={`themeContainer ${dark ? "dark-theme" : "light-theme"}`}>
       
       <DarkModeToggle toggleTheme={toggleTheme} dark={dark} />

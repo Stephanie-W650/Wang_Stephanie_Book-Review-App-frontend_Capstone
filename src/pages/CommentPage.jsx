@@ -6,13 +6,14 @@ export default function CommentPage() {
   const nav = useNavigate()
   const [Comment, setComment] = useState({})
   const {id} = useParams()
-
+// useEffect hook to fetch the comment data when id changes or first loaded
   useEffect(() => {
    getCommentByID(id)
     .then(res => setComment(res.data) )
   }, [])
-
+  // Function to delete the comment
   const deleteTheComment = () => {
+  // Calling the deleteComment function and navigating to the home page after deletion
     deleteComment(id).then(() => {nav('/')})
   }
   
